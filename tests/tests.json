@@ -1,0 +1,103 @@
+[
+  {
+    "name": "Farmer-first homepage, five navigation areas and Tamil toggle",
+    "sanity": true,
+    "viewport": "mobile",
+    "covers": [
+      "farmer-first value proposition",
+      "crop comparison entry point",
+      "farm profile entry point",
+      "sample village demo",
+      "five primary navigation areas",
+      "Tamil labels",
+      "mobile responsive navigation"
+    ],
+    "description": "Verifies a rural farmer can understand the core benefits immediately and reach a practical first workflow on a phone.",
+    "steps": [
+      "Open app at 375px width",
+      "Read the opening message and three farmer benefit labels",
+      "Select Start with my farm and confirm Farm profiles opens",
+      "Return to Overview and open Explore village demo",
+      "Switch Tamil and English",
+      "Inspect the five primary navigation areas"
+    ],
+    "expected": "The homepage explains crop comparison, irrigation planning and Tamil guidance; the farm profile and clearly labelled demo entry points work; Tamil/English toggle and mobile navigation remain usable."
+  },
+  {
+    "name": "OpenRouter credential and contextual AI workflow",
+    "viewport": "desktop",
+    "covers": [
+      "server-side OPENROUTER_API_KEY",
+      "OpenRouter current-key endpoint",
+      "chat completions",
+      "no secret in browser response"
+    ],
+    "description": "Checks the backend validates the configured credential and a contextual question receives a grounded explanation.",
+    "steps": [
+      "Open Evidence & AI",
+      "Wait for AI connection status",
+      "Ask: With a 40% supply shock, what should our village review first?",
+      "Inspect the answer and model route"
+    ],
+    "expected": "The UI reports connected only when OpenRouter accepts the server-side key; a grounded response appears; no key value is returned to the browser."
+  },
+  {
+    "name": "Weather, village scenario and adaptive intervention search",
+    "viewport": "desktop",
+    "covers": [
+      "Open-Meteo forecast provenance",
+      "resilience supply shock",
+      "12-candidate bounded intervention search",
+      "top-three strategy comparison",
+      "farm vulnerability radar",
+      "sensitivity uncertainty envelope"
+    ],
+    "description": "Checks weather provenance, deterministic scenario changes and transparent optimizer output.",
+    "steps": [
+      "Open Water outlook and inspect source/timestamp",
+      "Open Resilience Engine and select a 40% supply shock",
+      "Inspect the three ranked intervention alternatives",
+      "Select an alternative and inspect farm-level screening rows",
+      "Review the uncertainty sensitivity range and its disclaimer"
+    ],
+    "expected": "Scenario values recalculate; up to three candidate strategies and farm-level screening rows appear; sensitivity is labelled as a range rather than a statistical confidence interval."
+  },
+  {
+    "name": "Pump-Minute and WaterProof core workflows",
+    "viewport": "desktop",
+    "covers": [
+      "pump discharge constraints",
+      "unmet demand",
+      "server-side SHA-256 validation",
+      "evidence chain"
+    ],
+    "description": "Checks the action and evidence workflows remain available inside the simplified navigation.",
+    "steps": [
+      "Open Irrigation then Pump-Minute",
+      "Set pump flow to 10 L/min, 30 minutes and 100 L storage; calculate plan",
+      "Open Evidence & AI then WaterProof",
+      "Record a baseline with an evidence note"
+    ],
+    "expected": "Pump delivery respects the storage limit and shows unmet target; WaterProof records server-validated hash integrity while retaining farmer-reported verification status."
+  },
+  {
+    "name": "Mobile layout and external-provider fallback",
+    "viewport": "mobile",
+    "covers": [
+      "responsive five-tab navigation",
+      "weather provider failure",
+      "AI provider failure",
+      "deterministic calculators remain available",
+      "optimizer mobile layout"
+    ],
+    "description": "Checks phone usability and useful fallback behaviour when external providers are unavailable.",
+    "steps": [
+      "Open at 375px width",
+      "Navigate through all five primary areas",
+      "Open the optimizer and select a strategy",
+      "Simulate an unavailable AI or weather provider",
+      "Open Pump-Minute"
+    ],
+    "expected": "Navigation and optimizer remain usable on mobile; provider failures show understandable feedback and deterministic planning remains available."
+  }
+]
